@@ -1008,9 +1008,10 @@ function getSpaWallThroatClipBox(poolGroup, spaGroup, pad = 0.01) {
   // Only cut the actual throat/opening through the pool wall.
   // Do not use the full expanded catchment AABB here, or the wall gets
   // over-voided around the tank and exposes gaps/light leaks.
-  const insidePad = 1.03 + SPA_THROAT_WIDTH_EXTRA + pad;
-  const outsideDepth = 1.28 + SPA_THROAT_WIDTH_EXTRA + pad;
+  const insidePad = 0.03 + SPA_THROAT_WIDTH_EXTRA + pad;
+  const outsideDepth = 0.28 + SPA_THROAT_WIDTH_EXTRA + pad;
   const alongPad = SPA_THROAT_ALONG_PAD + pad;
+  const extraAlongWall = 0.10; // adjust as needed
 
   let minX = center.x - halfX - alongPad;
   let maxX = center.x + halfX + alongPad;
