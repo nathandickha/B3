@@ -1010,7 +1010,7 @@ function getSpaWallThroatClipBox(poolGroup, spaGroup, pad = 0.01) {
   // over-voided around the tank and exposes gaps/light leaks.
   const insidePad = 0.03 + SPA_THROAT_WIDTH_EXTRA + pad;
   const outsideDepth = 0.28 + SPA_THROAT_WIDTH_EXTRA + pad;
-  const alongPad = SPA_THROAT_ALONG_PAD + pad;
+  const alongPad = SPA_THROAT_ALONG_PAD + pad + 0.1;
 
   let minX = center.x - halfX - alongPad;
   let maxX = center.x + halfX + alongPad;
